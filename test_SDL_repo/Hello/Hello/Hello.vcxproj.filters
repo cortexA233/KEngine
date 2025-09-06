@@ -18,5 +18,23 @@
     <ClCompile Include="hello.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="PlayerCharacter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\SDL\SDL3_source\SDL-release-3.2.22\VisualC\SDL\SDL.vcxproj" />
+    <None Include="..\..\..\SDL\SDL3_source\SDL_image-release-3.2.4\VisualC\SDL_image.vcxproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="PlayerCharacter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

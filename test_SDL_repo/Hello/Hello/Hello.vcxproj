@@ -71,7 +71,16 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>C:\recent_project\KEngine\SDL\SDL3_source\SDL-release-3.2.22\include;$(IncludePath)</IncludePath>
+    <IncludePath>C:\recent_project\KEngine\SDL\SDL3_source\SDL_image-release-3.2.4\include;C:\recent_project\KEngine\SDL\SDL3_source\SDL-release-3.2.22\include;C:\recent_project\KEngine\SDL\SDL3_source\SDL-release-3.2.22\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>C:\recent_project\KEngine\SDL\SDL3_source\SDL_image-release-3.2.4\include;C:\recent_project\KEngine\SDL\SDL3_source\SDL-release-3.2.22\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>C:\recent_project\KEngine\SDL\SDL3_source\SDL_image-release-3.2.4\include;C:\recent_project\KEngine\SDL\SDL3_source\SDL-release-3.2.22\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>C:\recent_project\KEngine\SDL\SDL3_source\SDL_image-release-3.2.4\include;C:\recent_project\KEngine\SDL\SDL3_source\SDL-release-3.2.22\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -79,6 +88,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\recent_project\KEngine\SDL\SDL3_source\SDL-release-3.2.22\VisualC\SDL</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -93,6 +103,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\recent_project\KEngine\SDL\SDL3_source\SDL-release-3.2.22\VisualC\SDL</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -105,7 +116,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\recent_project\KEngine\SDL\SDL3_source\SDL-release-3.2.22\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\recent_project\KEngine\SDL\SDL3_source\SDL-release-3.2.22\VisualC\SDL</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -120,6 +131,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\recent_project\KEngine\SDL\SDL3_source\SDL-release-3.2.22\VisualC\SDL</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -130,9 +142,22 @@
     <ProjectReference Include="..\..\..\SDL\SDL3_source\SDL-release-3.2.22\VisualC\SDL\SDL.vcxproj">
       <Project>{81ce8daf-ebb2-4761-8e45-b71abcca8c68}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\SDL\SDL3_source\SDL_image-release-3.2.4\VisualC\SDL_image.vcxproj">
+      <Project>{2bd5534e-00e2-4bea-ac96-d9a92ea24696}</Project>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="hello.cpp" />
+    <ClCompile Include="PlayerCharacter.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\SDL\SDL3_source\SDL-release-3.2.22\VisualC\SDL\SDL.vcxproj" />
+    <None Include="..\..\..\SDL\SDL3_source\SDL_image-release-3.2.4\VisualC\SDL_image.vcxproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GameObject.h" />
+    <ClInclude Include="PlayerCharacter.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
