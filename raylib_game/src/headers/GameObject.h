@@ -8,4 +8,6 @@ public:
 
     GameObject();
     virtual ~GameObject();
+
+    virtual void Tick(float deltaTime);
 };
