@@ -2,7 +2,7 @@
 #include "raylib.h"
 
 
-ResourcesManager::TexturePtr ResourcesManager::GetOrLoadTexture(const std::string& name)
+std::shared_ptr<Texture> ResourcesManager::GetOrLoadTexture(const std::string& name)
 {
     if (texturePool.find(name) != texturePool.end())
     {
@@ -10,7 +10,7 @@ ResourcesManager::TexturePtr ResourcesManager::GetOrLoadTexture(const std::strin
     }
 
     Texture texture = LoadTexture(name.c_str());
-    TexturePtr newTexture = TexturePtr(new Texture(texture), [](const Texture* texture){
+    std::shared_ptr<Texture> newTexture = std::shared_ptr<Texture>(new Texture(texture), [](const Texture* texture){
         if (texture)
         {
             UnloadTexture(*texture);
